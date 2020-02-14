@@ -52,7 +52,7 @@ describe 'As a User' do
 			@turbo.actors << @mel
 			@turbo.actors << @finn
 			@turbo.actors << @june
-
+		end
 
 		it 'I see their name and their age' do
 
