@@ -3,5 +3,9 @@ Rails.application.routes.draw do
 
 	#studios
 
-	get '/studios', to: 'studios#index' 
+	get '/studios', to: 'studios#index'
+
+	#actors
+
+	get '/actors/:actor_id', to: 'actors#show'
 end

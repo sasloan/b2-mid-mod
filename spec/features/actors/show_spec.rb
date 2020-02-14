@@ -28,7 +28,7 @@ describe 'As a User' do
 			@star.actors << @lady_gaga
 			@star.actors << @brad
 
-			@it.actors << @fin
+			@it.actors << @finn
 			@it.actors << @wyatt
 
 			@snow.actors << @june
@@ -44,7 +44,7 @@ describe 'As a User' do
 			@bb.actors << @june
 
 			@shrek.actors << @mel
-			@shrek.actors << @fin
+			@shrek.actors << @finn
 
 			@trolls.actors << @lady_gaga
 
