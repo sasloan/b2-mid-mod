@@ -10,4 +10,22 @@ describe Actor, type: :model do
 		it {should have_many :movie_actors}
 		it {should have_many(:movies).through(:movie_actors)}
 	end
+
+	describe 'Methods' do
+		before :each do
+			@mel = Actor.create!(name: "Mel Blanc", age: 81)
+			@june = Actor.create!(name: "June Foray", age: 99)
+			@lady_gaga = Actor.create!(name: "Lady Gaga", age: 33)
+			@brad = Actor.create!(name: "Bradley Cooper", age: 45)
+			@finn = Actor.create!(name: "Finn Wolfhard", age: 17)
+			@wyatt = Actor.create!(name: "Wyatt Oleff", age: 16)
+		end
+
+		it '.list_alphabetically' do
+			expect(Actor.list_alphabetically).to eq([@brad.name, @finn.name, @june.name, @lady_gaga.name, @mel.name, @wyatt.name])
+		end
+
+		it '.average_actor_age'
+			expect(Actor.average_actor_age).to eq(48.5)
+		end
 end
