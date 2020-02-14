@@ -5,7 +5,7 @@ class Actor < ApplicationRecord
 	has_many :movies, through: :movie_actors
 
 	def self.list_alphabetically
-		Actor.order(:name)
+		Actor.order(:name).pluck(:name)
 	end
 
 	def self.average_actor_age

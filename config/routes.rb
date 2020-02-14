@@ -8,4 +8,8 @@ Rails.application.routes.draw do
 	#actors
 
 	get '/actors/:actor_id', to: 'actors#show'
+
+	#movies
+
+	get '/movies/:movie_id', to: 'movies#show'
 end

@@ -22,7 +22,7 @@ describe Actor, type: :model do
 		end
 
 		it '.list_alphabetically' do
-			expect(Actor.list_alphabetically).to eq([@brad, @finn, @june, @lady_gaga, @mel, @wyatt])
+			expect(Actor.list_alphabetically).to eq([@brad.name, @finn.name, @june.name, @lady_gaga.name, @mel.name, @wyatt.name])
 		end
 
 		it '.average_actor_age' do
