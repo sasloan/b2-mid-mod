@@ -18,14 +18,14 @@ describe 'As a Visitor' do
 
 			visit '/studios'
 		end
-		
+
 		it 'I should see a list of all the staudios' do
 
 			expect(current_path).to eq("/studios")
 
 			expect(page).to have_content(@wb.name)
 			expect(page).to have_content(@disney.name)
-			expect(page).to have_content(@marvel.name)
+			expect(page).to have_content(@dreamworks.name)
 		end
 
 		it 'I should see all the movies for this studio underneath all the studio names' do
