@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-describe 'As a Visitor' do
+describe 'As a User' do
 	describe 'When I Visit the Studio index page.' do
 		before :each do
 			@wb = Studio.create!(name: "Warner Brothers Studio")
