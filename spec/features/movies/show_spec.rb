@@ -92,7 +92,7 @@ describe 'As a User' do
 
 			expect(current_path).to eq("/movies/#{@turbo.id}")
 
-			expect(page).to have_content("Actor's Name:")
+			expect(page).to have_content("Actors name")
 
 			fill_in :actor_name, with: @lady_gaga.name
 

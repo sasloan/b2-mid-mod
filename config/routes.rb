@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 	get '/actors/:actor_id', to: 'actors#show'
 
 	#movies
-
 	get '/movies/:movie_id', to: 'movies#show'
+
+	#add_actor
+	post '/movies/:movie_id/actors', to: 'add_actors#new'
 end

@@ -6,4 +6,12 @@
 
 <p><%= @movie.actors.list_alphabetically %></p>
 
-<p>Average Age of Actors: <%= @movie.actors.average_actor_age.round(0) %></p>	
+<p>Average Age of Actors: <%= @movie.actors.average_actor_age.round(0) %></p>
+
+<%= form_tag "/movies/#{@movie.id}/actors", method: :post do %>
+
+	<%= label_tag :actors_name %>
+	<%= text_field_tag :actor_name %>
+
+	<%= submit_tag "Submit" %>
+<% end %>
