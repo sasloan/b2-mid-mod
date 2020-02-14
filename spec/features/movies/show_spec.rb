@@ -85,5 +85,22 @@ describe 'As a User' do
 
 			expect(page).to have_content("Average Age of Actors: 53")
 		end
+
+		it 'I see a form that allows me to add and existing actor to the list of current actors' do
+
+			visit "/movies/#{@turbo.id}"
+
+			expect(current_path).to eq("/movies/#{@turbo.id}")
+
+			expect(page).to have_content("Actor's Name:")
+
+			fill_in :actor_name, with: @lady_gaga.name
+
+			click_on "Submit"
+
+			expect(current_path).to eq("/movies/#{@turbo.id}")
+
+			expect(page).to have_content(@lady_gaga.name)
+		end
 	end
 end
